@@ -1,11 +1,10 @@
 define(
 [
-    'libs/kage',
-    'models/BaseModel'
+    'libs/kage'
 ],
-function(kage, BaseModel) {
+function(kage) {
     var $(name) = kage.Class({
-        extends: BaseModel,
+        extends: kage.Model,
         _construct: function() {
             $(name)._super(this);
         }

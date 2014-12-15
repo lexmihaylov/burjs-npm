@@ -1,21 +1,17 @@
 define([
     'libs/kage',
-    'sections/BaseSection'
+    'components/BaseComponent'
 ],
 function(
         kage,
-        BaseSection
+        BaseComponent
 ) {
     var $(name) = kage.Class({
-        extends: BaseSection,
+        extends: BaseComponent,
         _construct: function () {
             $(name)._super(this);
         }
     });
-    
-    $(name).prototype.onDomInsert = function() {
-        // TODO: do something on dom insert
-    };
     
     return $(name);
 });

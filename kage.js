@@ -2,7 +2,7 @@
 var args = process.argv.splice(2);
 var printUsage = function() {
     console.log("Usage:");
-    console.log("\tkagejs [init|server|build|model|section|view] [<name>|<port>]\n");
+    console.log("\tkagejs [init|server|build|model|component|view] [<name>|<port>]\n");
     console.log("\tkagejs init - create a project in the current directory");
     console.log("\tkagejs server <port> - start listening for http requests " +
            "using current directory as document root");
@@ -10,8 +10,8 @@ var printUsage = function() {
            " For more info: http://requirejs.org/docs/optimization.html");
    console.log("\tkagejs model (<folder>/<ModelName>|<ModelName>) - "+
            "generates a model in public_html/js/app/models.");
-   console.log("\tkagejs section (<folder>/<SectionName>|<SectionName>) - "+
-           "generates a section in public_html/js/app/sections.");
+   console.log("\tkagejs component (<folder>/<ComponentName>|<ComponentName>) - "+
+           "generates a component in public_html/js/app/components.");
    console.log("\tkagejs view (<folder>/<ViewName>|<ViewName>) - "+
            "generates a view in public_html/js/app/templates.");
 };
@@ -21,7 +21,7 @@ var commands = [
     'server',
     'build',
     'model',
-    'section',
+    'component',
     'view'
 ];
 
@@ -31,9 +31,9 @@ var allowedTypes = {
         path: process.cwd() + '/public_html/js/app/models/',
         ext: '.js'
     }, 
-    'section': {
-        suffix: 'Section',
-        path: process.cwd() + '/public_html/js/app/sections/',
+    'component': {
+        suffix: 'Component',
+        path: process.cwd() + '/public_html/js/app/components/',
         ext: '.js'
     },
     
@@ -110,12 +110,10 @@ var printProjectStructure = function() {
     console.log("| +--css/");
     console.log("| +--js/");
     console.log("| |  +--app/");
-    console.log("| |  |  +--helpers/");
+    console.log("| |  |  +--services/");
     console.log("| |  |  +--models/");
-    console.log("| |  |  |  +--BaseModel.js");
-    console.log("| |  |  +--sections/");
-    console.log("| |  |  |  +--BaseSection.js");
-    console.log("| |  |  |  +--Main.js");
+    console.log("| |  |  +--components/");
+    console.log("| |  |  |  +--BaseComponent.js");
     console.log("| |  |  +--templates/");
     console.log("| |  +--config/");
     console.log("| |  |  +--application.js");

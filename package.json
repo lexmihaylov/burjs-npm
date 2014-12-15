@@ -26,5 +26,10 @@
     ],
     
     "license": "MIT",
-    "engine": "node >= 0.10.22"
+    "engine": "node >= 0.10.22",
+    
+    "repository": { 
+        "type" : "git",
+        "url" : "https://github.com/lexmihaylov/kage-npm.git"
+    }
 }

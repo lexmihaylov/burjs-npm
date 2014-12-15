@@ -1,9 +1,9 @@
 requirejs.config({
     urlArgs: Date.now(), // no cache
     paths: {
-        sections: 'app/sections',
+        components: 'app/components',
         models: 'app/models',
-        helpers: 'app/helpers',
+        services: 'app/services',
         
         jquery: 'libs/jquery'
     },
@@ -21,11 +21,7 @@ require([
 ],
 // main application function (starter)
 function(kage) {
-    kage.startApp().progress(function() {
-                
-    }).done(function() {
-
-    });
+    
 });
 
 

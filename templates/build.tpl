@@ -4,9 +4,9 @@
     dir: "build",
     logLevel: 0,
     paths: {
-        sections: 'app/sections',
+        components: 'app/components',
         models: 'app/models',
-        helpers: 'app/helpers',
+        services: 'app/services',
 
         jquery: 'libs/jquery'
     },
