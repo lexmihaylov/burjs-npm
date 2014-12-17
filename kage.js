@@ -209,9 +209,11 @@ switch (args[0]) {
         var connect = require('connect');
         var http = require('http');
         var serveStatic = require("serve-static");
+        var morgan = require("morgan");
+        
         var server = connect().
                 use(serveStatic(process.cwd())).
-                use(connect.logger());
+                use(morgan());
         
         http.createServer(server).
                 listen(args[1]);
