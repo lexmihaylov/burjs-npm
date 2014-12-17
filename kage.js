@@ -138,6 +138,7 @@ switch (args[0]) {
             process.exit();
         }
         
+        console.log("\nGenerating folder structure: ");
         fs.createReadStream(__dirname + '/templates/project/bower.json').
             pipe(fs.createWriteStream( process.cwd()+'/bower.json'));
         
