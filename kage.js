@@ -144,22 +144,22 @@ switch (args[0]) {
         fs.createReadStream(__dirname + '/templates/project/index.html').
             pipe(fs.createWriteStream( process.cwd()+'/index.html'));
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/css', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/css', process.cwd()+'/css', 
         {
             forceDelete: true
         });
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/js', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/js', process.cwd()+'/js', 
         {
             forceDelete: true
         });
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/resources', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/resources', process.cwd()+'/resources', 
         {
             forceDelete: true
         });
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/scss', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/scss', process.cwd()+'/scss', 
         {
             forceDelete: true
         });
