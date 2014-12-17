@@ -126,7 +126,7 @@ var printProjectStructure = function() {
 };
 
 switch (args[0]) {
-    case 'project':
+    case 'init':
         
         var wrench = require('wrench');
         var fs = require('fs');
