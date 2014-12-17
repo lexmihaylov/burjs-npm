@@ -106,23 +106,22 @@ var generate = function(type, filename) {
 var printProjectStructure = function() {
     console.log('+-build/');
     console.log('+-tests/');
-    console.log('+-public_html/');
-    console.log("| +--css/");
-    console.log("| +--js/");
-    console.log("| |  +--app/");
-    console.log("| |  |  +--services/");
-    console.log("| |  |  +--models/");
-    console.log("| |  |  +--components/");
-    console.log("| |  |  |  +--BaseComponent.js");
-    console.log("| |  |  +--templates/");
-    console.log("| |  +--config/");
-    console.log("| |  |  +--application.js");
-    console.log("| |  +--vendor/");
-    console.log("| |  +--main.js");
-    console.log("| +--resources/");
-    console.log("| +--scss/");
-    console.log("| +--index.html");
-    console.log("+--build.js");
+    console.log("+-css/");
+    console.log("+-js/");
+    console.log("| +--app/");
+    console.log("| |  +--services/");
+    console.log("| |  +--models/");
+    console.log("| |  +--components/");
+    console.log("| |  |  +--BaseComponent.js");
+    console.log("| |  +--templates/");
+    console.log("| +--config/");
+    console.log("| |  +--application.js");
+    console.log("| +--vendor/");
+    console.log("| +--main.js");
+    console.log("+-resources/");
+    console.log("+-scss/");
+    console.log("+-index.html");
+    console.log("+-build.js");
 };
 
 switch (args[0]) {
