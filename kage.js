@@ -213,7 +213,7 @@ switch (args[0]) {
         
         var server = connect().
                 use(serveStatic(process.cwd())).
-                use(morgan());
+                use(morgan('combined'));
         
         http.createServer(server).
                 listen(args[1]);
