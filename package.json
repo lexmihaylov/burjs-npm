@@ -15,16 +15,11 @@
     "description": "Generator for building web apps with kage.js",
     "author": "Alexander Mihaylov <lex.mihaylov@gmail.com>",
     "dependencies": {
-        "wrench": "1.5.x",
-        "connect": "2.11.x",
-        "requirejs": "2.1.x"
+        "wrench": ">=1.5.x",
+        "connect": ">=2.11.x",
+        "requirejs": ">=2.1.x",
+        "bower-installer": "latest"
     },
-    "bundledDependencies": [
-        "wrench",
-        "connect",
-        "requirejs"
-    ],
-    
     "license": "MIT",
     "engine": "node >= 0.10.22",
     
