@@ -138,9 +138,34 @@ switch (args[0]) {
             process.exit();
         }
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/*', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/bower.json', process.cwd()+'/', 
         {
-            forceDelete: false
+            forceDelete: true
+        });
+        
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/index.html', process.cwd()+'/', 
+        {
+            forceDelete: true
+        });
+        
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/css', process.cwd()+'/', 
+        {
+            forceDelete: true
+        });
+        
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/js', process.cwd()+'/', 
+        {
+            forceDelete: true
+        });
+        
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/resources', process.cwd()+'/', 
+        {
+            forceDelete: true
+        });
+        
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/scss', process.cwd()+'/', 
+        {
+            forceDelete: true
         });
         
         fs.mkdir(process.cwd() + '/build');
