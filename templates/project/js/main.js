@@ -5,7 +5,9 @@ requirejs.config({
         models: 'app/models',
         services: 'app/services',
         
-        jquery: 'libs/jquery'
+        jquery: 'vendor/jquery/jquery',
+        kage: 'vendor/kage.js/kage',
+        bootstrap: 'vendor/bootstrap/bootstrap'
     },
     
     shim: {
@@ -16,7 +18,7 @@ requirejs.config({
 });
 
 require([
-    'libs/kage',
+    'kage',
     'config/application'
 ],
 // main application function (starter)

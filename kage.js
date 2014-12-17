@@ -117,10 +117,6 @@ var printProjectStructure = function() {
     console.log("| |  |  +--templates/");
     console.log("| |  +--config/");
     console.log("| |  |  +--application.js");
-    console.log("| |  +--libs/");
-    console.log("| |  |  +--jquery.js");
-    console.log("| |  |  +--kage.js");
-    console.log("| |  |  +--require.js");
     console.log("| |  +--vendor/");
     console.log("| |  +--main.js");
     console.log("| +--resources/");
@@ -133,13 +129,15 @@ switch (args[0]) {
     case 'init':
         var wrench = require('wrench');
         var fs = require('fs');
+        var sys = require('sys')
+        var exec = require('child_process').exec;
         
         if(fs.existsSync('./.kage_project')) {
             console.error('Already a kage.js project.');
             process.exit();
         }
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/', process.cwd()+'/public_html', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/', process.cwd()+'/', 
         {
             forceDelete: true
         });
@@ -154,6 +152,11 @@ switch (args[0]) {
         fs.writeFileSync('./.kage_project', '');
         
         printProjectStructure();
+        
+        exec("bower-installer", function(error, stdout, stderr) {
+            sys.puts(stdout);
+        });
+        
         console.log('kage.js Project Generated.');
         break;
     case 'build':

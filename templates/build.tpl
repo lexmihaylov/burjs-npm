@@ -7,8 +7,10 @@
         components: 'app/components',
         models: 'app/models',
         services: 'app/services',
-
-        jquery: 'libs/jquery'
+        
+        jquery: 'vendor/jquery/jquery',
+        kage: 'vendor/kage.js/kage',
+        bootstrap: 'vendor/bootstrap/bootstrap'
     },
 
     shim: {

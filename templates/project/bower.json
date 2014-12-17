@@ -1,0 +1,13 @@
+{
+  "name": "untitled-project",
+  "version": "0.0.0",
+  "description": "none",
+  "dependencies": {
+    "kage.js": "https://github.com/lexmihaylov/kage.js.git",
+    "requirejs": "latest",
+    "bootstrap": "latest"
+  },
+  "install": {
+      "path": "js/vendor"
+  }
+}
