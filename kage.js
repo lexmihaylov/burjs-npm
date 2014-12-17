@@ -138,7 +138,7 @@ switch (args[0]) {
             process.exit();
         }
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/', process.cwd()+'/', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/*', process.cwd()+'/', 
         {
             forceDelete: false
         });
