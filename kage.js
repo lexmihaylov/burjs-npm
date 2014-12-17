@@ -3,7 +3,7 @@ var args = process.argv.splice(2);
 var printUsage = function() {
     console.log("Usage:");
     console.log("\tkagejs [init|server|build|model|component|view] [<name>|<port>]\n");
-    console.log("\tkagejs init - create a project in the current directory");
+    console.log("\tkagejs init - create a new project");
     console.log("\tkagejs server <port> - start listening for http requests " +
            "using current directory as document root");
    console.log("\tkagejs build [<build.js>] - builds the project by using r.js." +
@@ -54,7 +54,7 @@ if(commands.indexOf(args[0]) === -1) {
     process.exit();
 }
 
-if((args[0] !== 'init' && args[0] !== 'build') && args.length < 2) {
+if((args[0] !== 'build' || args[0] !== 'init') && args.length < 2) {
     printUsage();
     process.exit();
 }
@@ -127,6 +127,7 @@ var printProjectStructure = function() {
 
 switch (args[0]) {
     case 'init':
+        
         var wrench = require('wrench');
         var fs = require('fs');
         var sys = require('sys')
@@ -139,7 +140,7 @@ switch (args[0]) {
         
         wrench.copyDirSyncRecursive(__dirname + '/templates/project/', process.cwd()+'/', 
         {
-            forceDelete: true
+            forceDelete: false
         });
         
         fs.mkdir(process.cwd() + '/build');
