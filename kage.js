@@ -208,8 +208,9 @@ switch (args[0]) {
     case 'server':
         var connect = require('connect');
         var http = require('http');
+        var serveStatic = require("serve-static");
         var server = connect().
-                use(connect.static(process.cwd())).
+                use(serveStatic(process.cwd())).
                 use(connect.logger());
         
         http.createServer(server).

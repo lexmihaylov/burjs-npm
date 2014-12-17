@@ -17,6 +17,7 @@
     "dependencies": {
         "wrench": ">=1.5.x",
         "connect": ">=2.11.x",
+        "serve-static": ">=1.7.1"
         "requirejs": ">=2.1.x",
         "bower-installer": "latest"
     },
