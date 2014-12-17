@@ -28,18 +28,18 @@ var commands = [
 var allowedTypes = {
     'model': {
         suffix: 'Model',
-        path: process.cwd() + '/public_html/js/app/models/',
+        path: process.cwd() + '/js/app/models/',
         ext: '.js'
     }, 
     'component': {
         suffix: 'Component',
-        path: process.cwd() + '/public_html/js/app/components/',
+        path: process.cwd() + '/js/app/components/',
         ext: '.js'
     },
     
     'view': {
         suffix: null,
-        path: process.cwd() + '/public_html/js/app/templates/',
+        path: process.cwd() + '/js/app/templates/',
         ext: '.ejs'
     }
 };
