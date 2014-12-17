@@ -138,15 +138,11 @@ switch (args[0]) {
             process.exit();
         }
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/bower.json', process.cwd()+'/', 
-        {
-            forceDelete: true
-        });
+        fs.createReadStream(__dirname + '/templates/project/bower.json').
+            pipe(fs.createWriteStream( process.cwd()+'/bower.json'));
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/index.html', process.cwd()+'/', 
-        {
-            forceDelete: true
-        });
+        fs.createReadStream(__dirname + '/templates/project/index.html').
+            pipe(fs.createWriteStream( process.cwd()+'/index.html'));
         
         wrench.copyDirSyncRecursive(__dirname + '/templates/project/css', process.cwd()+'/', 
         {
