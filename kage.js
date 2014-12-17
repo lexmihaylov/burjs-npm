@@ -175,11 +175,13 @@ switch (args[0]) {
         
         printProjectStructure();
         
-        exec("bower-installer", function(error, stdout, stderr) {
+        exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
             sys.puts(stdout);
+            
+            console.log("\nkage.js Project Generated.");
         });
         
-        console.log('kage.js Project Generated.');
+        
         break;
     case 'build':
         var fs = require('fs');
