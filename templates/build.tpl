@@ -1,5 +1,5 @@
 ({
-    appDir: "public_html/",
+    appDir: "./",
     baseUrl: "js/",
     dir: "build",
     logLevel: 0,
