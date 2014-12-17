@@ -1,4 +1,4 @@
-define(['libs/kage'], function(kage) {
+define(['kage'], function(kage) {
 
     /**
      * BaseComponent shoud be extended by all application component

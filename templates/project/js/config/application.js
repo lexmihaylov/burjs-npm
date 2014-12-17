@@ -1,4 +1,4 @@
-define(['libs/kage'], function(kage) {
+define(['kage'], function(kage) {
     kage.config({
         baseDir: 'js/',
         cssPath: 'css/',
