@@ -175,6 +175,7 @@ switch (args[0]) {
         
         printProjectStructure();
         
+        console.log("\nInstalling Dependencies: ");
         exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
             sys.puts(stdout);
             
