@@ -2,18 +2,18 @@
 var args = process.argv.splice(2);
 var printUsage = function() {
     console.log("Usage:");
-    console.log("\tkagejs [init|server|build|model|component|view] [<name>|<port>]\n");
-    console.log("\tkagejs init - create a project in the current directory");
-    console.log("\tkagejs server <port> - start listening for http requests " +
-           "using current directory as document root");
-   console.log("\tkagejs build [<build.js>] - builds the project by using r.js." +
-           " For more info: http://requirejs.org/docs/optimization.html");
-   console.log("\tkagejs model (<folder>/<ModelName>|<ModelName>) - "+
-           "generates a model in public_html/js/app/models.");
-   console.log("\tkagejs component (<folder>/<ComponentName>|<ComponentName>) - "+
-           "generates a component in public_html/js/app/components.");
-   console.log("\tkagejs view (<folder>/<ViewName>|<ViewName>) - "+
-           "generates a view in public_html/js/app/templates.");
+    console.log("    kagejs [init|server|build|model|component|view] [<name>|<port>]\n");
+    console.log("    kagejs init - create a project in the current directory");
+    console.log("    kagejs server <port> - start listening for http requests " +
+                "using current directory as document root");
+    console.log("    kagejs build [<build.js>] - builds the project by using r.js." +
+                " For more info: http://requirejs.org/docs/optimization.html");
+    console.log("    kagejs model (<folder>/<ModelName>|<ModelName>) - "+
+                "generates a model in js/app/models.");
+    console.log("    kagejs component (<folder>/<ComponentName>|<ComponentName>) - "+
+                "generates a component in js/app/components.");
+    console.log("    kagejs view (<folder>/<ViewName>|<ViewName>) - "+
+                "generates a view in js/app/templates.");
 };
 
 var commands = [
