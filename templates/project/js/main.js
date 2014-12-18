@@ -1,6 +1,8 @@
 requirejs.config({
     urlArgs: Date.now(), // no cache
     paths: {
+        text: 'vendor/requirejs-text/text',
+        
         components: 'app/components',
         models: 'app/models',
         services: 'app/services',

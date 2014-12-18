@@ -1,5 +1,5 @@
 define([
-    'libs/kage',
+    'kage',
     'components/BaseComponent'
 ],
 function(

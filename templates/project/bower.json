@@ -5,6 +5,7 @@
   "dependencies": {
     "kage.js": "https://github.com/lexmihaylov/kage.js.git",
     "requirejs": "latest",
+    "requirejs-text": "latest",
     "bootstrap": "latest"
   },
   "install": {

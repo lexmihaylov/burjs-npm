@@ -1,6 +1,6 @@
 define(
 [
-    'libs/kage'
+    'kage'
 ],
 function(kage) {
     var $(name) = kage.Class({
