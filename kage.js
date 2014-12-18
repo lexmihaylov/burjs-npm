@@ -18,6 +18,7 @@ var printUsage = function() {
 
 var commands = [
     'init',
+    'install'
     'server',
     'build',
     'model',
