@@ -12,12 +12,16 @@
         kage: 'vendor/kage.js/kage',
         bootstrap: 'vendor/bootstrap/bootstrap'
     },
-
+    
     shim: {
-        'jquery': {
+        jquery: {
             exports: 'jQuery'
+        },
+        
+        bootstrap: {
+            deps: ['jquery']
         }
-    },
+    }
 
     modules: [
         {

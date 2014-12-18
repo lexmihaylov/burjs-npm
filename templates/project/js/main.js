@@ -11,14 +11,19 @@ requirejs.config({
     },
     
     shim: {
-        'jquery': {
+        jquery: {
             exports: 'jQuery'
+        },
+        
+        bootstrap: {
+            deps: ['jquery']
         }
     }
 });
 
 require([
     'kage',
+    'bootstrap',
     'config/application'
 ],
 // main application function (starter)
