@@ -2,7 +2,7 @@
 var args = process.argv.splice(2);
 var printUsage = function() {
     console.log("Usage:");
-    console.log("    kagejs [init|server|build|model|component|view] [<name>|<port>]\n");
+    console.log("    kagejs [init|server|build|model|component|view|install] [<name>|<port>]\n");
     console.log("    kagejs init - create a project in the current directory");
     console.log("    kagejs server <port> - start listening for http requests " +
                 "using current directory as document root");
@@ -54,7 +54,7 @@ if(commands.indexOf(args[0]) === -1) {
     process.exit();
 }
 
-if((args[0] !== 'init' && args[0] !== 'build') && args.length < 2) {
+if((args[0] !== 'init' && args[0] !== 'build' && args[0] !== 'install') && args.length < 2) {
     printUsage();
     process.exit();
 }
@@ -221,6 +221,14 @@ switch (args[0]) {
         console.log('Listening on port ' + args[1]);
         console.log('Document root is ' + process.cwd());
         console.log('Press Ctrl-C to quit');
+        break;
+    case 'install':
+        var exec = require("child_process").exec;
+        var sys = require("sys");
+        
+        exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
+            sys.puts(stdout);
+        });
         break;
     default:
         generate(args[0], args[1]);
