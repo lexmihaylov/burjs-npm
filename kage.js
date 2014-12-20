@@ -10,6 +10,8 @@ var printUsage = function() {
                 " For more info: http://requirejs.org/docs/optimization.html");
     console.log("    kagejs model (<folder>/<ModelName>|<ModelName>) - "+
                 "generates a model in js/app/models.");
+    console.log("    kagejs service (<folder>/<ServiceName>|<ServiceName>) - "+
+                "generates a service in js/app/services.");
     console.log("    kagejs component (<folder>/<ComponentName>|<ComponentName>) - "+
                 "generates a component in js/app/components.");
     console.log("    kagejs view (<folder>/<ViewName>|<ViewName>) - "+
@@ -23,6 +25,7 @@ var commands = [
     'build',
     'model',
     'component',
+    'service',
     'view'
 ];
 
@@ -30,6 +33,11 @@ var allowedTypes = {
     'model': {
         suffix: 'Model',
         path: process.cwd() + '/js/app/models/',
+        ext: '.js'
+    }, 
+    'service': {
+        suffix: 'Service',
+        path: process.cwd() + '/js/app/services/',
         ext: '.js'
     }, 
     'component': {
