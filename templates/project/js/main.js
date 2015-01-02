@@ -8,7 +8,7 @@ requirejs.config({
         services: 'app/services',
         
         jquery: 'vendor/jquery/jquery',
-        kage: 'vendor/kage.js/kage',
+        bur: 'vendor/burjs/bur',
         bootstrap: 'vendor/bootstrap/bootstrap'
     },
     
