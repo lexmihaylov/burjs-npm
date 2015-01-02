@@ -24,12 +24,12 @@ requirejs.config({
 });
 
 require([
-    'kage',
+    'bur',
     'bootstrap',
     'config/application'
 ],
 // main application function (starter)
-function(kage) {
+function(bur) {
     
 });
 

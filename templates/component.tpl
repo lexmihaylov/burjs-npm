@@ -1,12 +1,12 @@
 define([
-    'kage',
+    'bur',
     'components/BaseComponent'
 ],
 function(
-        kage,
+        bur,
         BaseComponent
 ) {
-    var $(name) = kage.Class({
+    var $(name) = bur.Class({
         extends: BaseComponent,
         _construct: function () {
             $(name)._super(this);

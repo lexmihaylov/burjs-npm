@@ -1,9 +1,9 @@
 define(
 [
-    'kage'
+    'bur'
 ],
-function(kage) {
-    var $(name) = kage.Class({
+function(bur) {
+    var $(name) = bur.Class({
         _construct: function() {
         
         }

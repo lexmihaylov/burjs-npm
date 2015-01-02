@@ -2,19 +2,19 @@
 var args = process.argv.splice(2);
 var printUsage = function() {
     console.log("Usage:");
-    console.log("    kagejs [init|server|build|model|component|view|install] [<name>|<port>]\n");
-    console.log("    kagejs init - create a project in the current directory");
-    console.log("    kagejs server <port> - start listening for http requests " +
+    console.log("    burjs [init|server|build|model|component|view|install] [<name>|<port>]\n");
+    console.log("    burjs init - create a project in the current directory");
+    console.log("    burjs server <port> - start listening for http requests " +
                 "using current directory as document root");
-    console.log("    kagejs build [<build.js>] - builds the project by using r.js." +
+    console.log("    burjs build [<build.js>] - builds the project by using r.js." +
                 " For more info: http://requirejs.org/docs/optimization.html");
-    console.log("    kagejs model (<folder>/<ModelName>|<ModelName>) - "+
+    console.log("    burjs model (<folder>/<ModelName>|<ModelName>) - "+
                 "generates a model in js/app/models.");
-    console.log("    kagejs service (<folder>/<ServiceName>|<ServiceName>) - "+
+    console.log("    burjs service (<folder>/<ServiceName>|<ServiceName>) - "+
                 "generates a service in js/app/services.");
-    console.log("    kagejs component (<folder>/<ComponentName>|<ComponentName>) - "+
+    console.log("    burjs component (<folder>/<ComponentName>|<ComponentName>) - "+
                 "generates a component in js/app/components.");
-    console.log("    kagejs view (<folder>/<ViewName>|<ViewName>) - "+
+    console.log("    burjs view (<folder>/<ViewName>|<ViewName>) - "+
                 "generates a view in js/app/templates.");
 };
 

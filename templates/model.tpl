@@ -1,10 +1,10 @@
 define(
 [
-    'kage'
+    'bur'
 ],
 function(kage) {
-    var $(name) = kage.Class({
-        extends: kage.Model,
+    var $(name) = bur.Class({
+        extends: bur.Model,
         _construct: function() {
             $(name)._super(this);
         }

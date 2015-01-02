@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "none",
   "dependencies": {
-    "kage.js": "https://github.com/lexmihaylov/kage.js.git",
+    "burjs": "https://github.com/lexmihaylov/burjs.git",
     "requirejs": "latest",
     "requirejs-text": "latest",
     "bootstrap": "latest"

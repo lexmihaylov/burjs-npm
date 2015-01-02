@@ -1,4 +1,4 @@
-kage-npm
+burjs-npm
 ========
 
-npm generators for kage.js
+npm generators for burjs.js
