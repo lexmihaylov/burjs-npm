@@ -141,7 +141,7 @@ switch (args[0]) {
         var sys = require('sys')
         var exec = require('child_process').exec;
         
-        if(fs.existsSync('./.kage_project')) {
+        if(fs.existsSync('./.bur_project')) {
             console.error('Already a kage.js project.');
             process.exit();
         }
@@ -180,7 +180,7 @@ switch (args[0]) {
             encoding: 'utf8'
         });
         fs.writeFileSync('./build.js', buildTemplate);
-        fs.writeFileSync('./.kage_project', '');
+        fs.writeFileSync('./.bur_project', '');
         
         printProjectStructure();
         
