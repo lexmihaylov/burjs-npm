@@ -18,6 +18,24 @@ __Creating project__
     mkdir my_project
     cd my_project
     burjs init
+`src/` folder structure:
+
+    +-css/
+    +-js/
+    | +--app/
+    | |  +--services/
+    | |  +--models/
+    | |  +--components/
+    | |  |  +--BaseComponent.js
+    | |  +--templates/
+    | +--config/
+    | |  +--application.js
+    | +--vendor/
+    | +--main.js
+    +-resources/
+    +-scss/
+    +-index.html
+    +-build.js
     
 __Generators__
 
