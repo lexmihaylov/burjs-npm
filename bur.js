@@ -197,7 +197,7 @@ switch (args[0]) {
         var exec = require("child_process").exec;
         var sys = require("sys");
         
-        exec(__dirname + "/node_modules/.bin/rjs", function(error, stdout, stderr) {
+        exec(__dirname + "/node_modules/bin/r.js", function(error, stdout, stderr) {
             sys.puts(stdout);
         });
         break;
