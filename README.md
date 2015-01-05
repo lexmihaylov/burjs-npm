@@ -40,4 +40,5 @@ __Installing components via bower__
 
     bower install vue
 After the bower package has been istalled you need to run:
+
     burjs install # this will install all the main files listed in bower.json to src/js/vendor
