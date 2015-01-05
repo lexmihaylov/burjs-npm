@@ -35,7 +35,6 @@ __Creating project__
     +-resources/
     +-scss/
     +-index.html
-    +-build.js
     
 __Generators__
 
