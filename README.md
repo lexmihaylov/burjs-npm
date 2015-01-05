@@ -35,3 +35,9 @@ __Building your project__
     burjs build
     
 This will create a build of your project in my_project/build. For more info: http://requirejs.org/docs/optimization.html.
+
+__Installing components via bower__
+
+    bower install vue
+After the bower package has been istalled you need to run:
+    burjs install # this will install all the main files listed in bower.json to src/js/vendor
