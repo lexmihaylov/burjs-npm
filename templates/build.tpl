@@ -1,6 +1,6 @@
 ({
-    appDir: "./",
-    baseUrl: "js/",
+    appDir: "src/",
+    baseUrl: "src/js/",
     dir: "build",
     logLevel: 0,
     paths: {
@@ -25,6 +25,9 @@
         }
     },
 
-    name: "main",
-    out: "main-build.js"
+    modules: [
+        {
+            name: "main"
+        }
+    ]
 })

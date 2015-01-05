@@ -32,23 +32,23 @@ var commands = [
 var allowedTypes = {
     'model': {
         suffix: 'Model',
-        path: process.cwd() + '/js/app/models/',
+        path: process.cwd() + '/src/js/app/models/',
         ext: '.js'
     }, 
     'service': {
         suffix: 'Service',
-        path: process.cwd() + '/js/app/services/',
+        path: process.cwd() + '/src/js/app/services/',
         ext: '.js'
     }, 
     'component': {
         suffix: 'Component',
-        path: process.cwd() + '/js/app/components/',
+        path: process.cwd() + '/src/js/app/components/',
         ext: '.js'
     },
     
     'view': {
         suffix: null,
-        path: process.cwd() + '/js/app/templates/',
+        path: process.cwd() + '/src/js/app/templates/',
         ext: '.ejs'
     }
 };
@@ -113,8 +113,6 @@ var generate = function(type, filename) {
 };
 
 var printProjectStructure = function() {
-    console.log('+-build/');
-    console.log('+-tests/');
     console.log("+-css/");
     console.log("+-js/");
     console.log("| +--app/");
@@ -146,39 +144,18 @@ switch (args[0]) {
             process.exit();
         }
         
-        console.log("\nGenerating folder structure: ");
-        fs.createReadStream(__dirname + '/templates/project/bower.json').
-            pipe(fs.createWriteStream( process.cwd()+'/bower.json'));
+        console.log("\nGenerating source folder: ");
         
-        fs.createReadStream(__dirname + '/templates/project/index.html').
-            pipe(fs.createWriteStream( process.cwd()+'/index.html'));
-        
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/css', process.cwd()+'/css', 
+        wrench.copyDirSyncRecursive(__dirname + '/templates/project/src', process.cwd()+'/src', 
         {
             forceDelete: true
         });
         
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/js', process.cwd()+'/js', 
-        {
-            forceDelete: true
-        });
-        
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/resources', process.cwd()+'/resources', 
-        {
-            forceDelete: true
-        });
-        
-        wrench.copyDirSyncRecursive(__dirname + '/templates/project/scss', process.cwd()+'/scss', 
-        {
-            forceDelete: true
-        });
-        
-        fs.mkdir(process.cwd() + '/build');
-        fs.mkdir(process.cwd() + '/tests');
         
         var buildTemplate = fs.readFileSync(__dirname + '/templates/build.tpl',{
             encoding: 'utf8'
         });
+        
         fs.writeFileSync('./build.js', buildTemplate);
         fs.writeFileSync('./.bur_project', '');
         
@@ -197,7 +174,7 @@ switch (args[0]) {
         var exec = require("child_process").exec;
         var sys = require("sys");
         
-        exec(__dirname + "/node_modules/bin/r.js -o build.js", function(error, stdout, stderr) {
+        exec(__dirname + "/node_modules/.bin/r.js -o build.js", function(error, stdout, stderr) {
             sys.puts(stdout);
         });
         break;
