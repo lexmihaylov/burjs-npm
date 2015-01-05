@@ -7,6 +7,16 @@ An npm package for the [BurJS](https://github.com/lexmihaylov/burjs) library. Th
  * build function by using requirejs;
  * dependency installation.
 
+The project template includes the following packages:
+ * burjs
+ * jQuery
+ * bootstrap
+ * requirejs
+ * requirejs-text (used for template loading)
+ 
+The template that BurJS-NPM provides is a starter application structure that provides 
+an AMD module standard and easy to use build process.
+
 ##Installation
 
     npm install -g lexmihaylov/burjs-npm
@@ -59,3 +69,4 @@ __Installing components via bower__
 After the bower package has been istalled you need to run:
 
     burjs install # this will install all the main files listed in bower.json to src/js/vendor
+    
