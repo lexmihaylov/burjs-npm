@@ -9,6 +9,6 @@
     "bootstrap": "latest"
   },
   "install": {
-      "path": "js/vendor"
+      "path": "src/js/vendor"
   }
 }
