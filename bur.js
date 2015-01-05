@@ -156,7 +156,12 @@ switch (args[0]) {
             encoding: 'utf8'
         });
         
+        var bowerFile = fs.readFileSync(__dirname + '/templates/bower.json',{
+            encoding: 'utf8'
+        });
+        
         fs.writeFileSync('./build.js', buildTemplate);
+        fs.writeFileSync('./bower.json', bowerFile);
         fs.writeFileSync('./.bur_project', '');
         
         printProjectStructure();
