@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "none",
   "dependencies": {
-    "burjs": "https://github.com/lexmihaylov/burjs.git",
+    "burjs": "lexmihaylov/burjs",
     "requirejs": "latest",
     "requirejs-text": "latest",
     "bootstrap": "latest"
