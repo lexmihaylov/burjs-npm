@@ -11,7 +11,7 @@
         services: 'app/services',
         
         jquery: 'vendor/jquery/jquery',
-        kage: 'vendor/burjs/bur',
+        bur: 'vendor/burjs/bur',
         bootstrap: 'vendor/bootstrap/bootstrap'
     },
     
