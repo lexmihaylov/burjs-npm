@@ -1,6 +1,6 @@
 ({
-    appDir: "src/",
-    baseUrl: "src/js/",
+    appDir: "./src/",
+    baseUrl: "./js/",
     dir: "build",
     logLevel: 0,
     paths: {
