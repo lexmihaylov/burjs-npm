@@ -188,31 +188,18 @@ switch (args[0]) {
         exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
             sys.puts(stdout);
             
-            console.log("\nkage.js Project Generated.");
+            console.log("\nBurJS Project Generated.");
         });
         
         
         break;
     case 'build':
-        var fs = require('fs');
-        var buildConfigFile = process.cwd() + '/build.js';
+        var exec = require("child_process").exec;
+        var sys = require("sys");
         
-        if(args[1]) {
-            buildConfigFile = args[1];
-        }
-        
-        if(!fs.existsSync(buildConfigFile)) {
-            console.error("Build config file does not exist.");
-            process.exit();
-        }
-        
-        var config = fs.readFileSync(buildConfigFile, {
-            encoding: 'utf8'
+        exec(__dirname + "/node_modules/.bin/rjs", function(error, stdout, stderr) {
+            sys.puts(stdout);
         });
-        
-        config = eval(config);
-        var rjs = require('requirejs');
-        rjs.optimize(config);
         break;
     case 'server':
         var connect = require('connect');
