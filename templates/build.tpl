@@ -23,11 +23,8 @@
         bootstrap: {
             deps: ['jquery']
         }
-    }
+    },
 
-    modules: [
-        {
-            name: "main"
-        }
-    ]
+    name: "main",
+    out: "main-build.js"
 })
