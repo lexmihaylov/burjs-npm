@@ -1,4 +1,6 @@
 ![BurJS](https://raw.githubusercontent.com/lexmihaylov/burjs/master/burjs.png)
+
+BurJS-NPM
 =======
 An npm package for the [BurJS](https://github.com/lexmihaylov/burjs) library. This package incudes: 
  * initializin BurJS project folder;
