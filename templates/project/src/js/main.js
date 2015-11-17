@@ -6,6 +6,7 @@ requirejs.config({
         components: 'app/components',
         models: 'app/models',
         services: 'app/services',
+        templates: 'app/templates',
         
         jquery: 'vendor/jquery/jquery',
         bur: 'vendor/burjs/bur',

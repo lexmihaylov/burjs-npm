@@ -1,7 +1,7 @@
 ({
     appDir: "./src/",
     baseUrl: "./js/",
-    dir: "build",
+    dir: "./build/",
     logLevel: 0,
     paths: {
         text: 'vendor/requirejs-text/text',
@@ -9,6 +9,7 @@
         components: 'app/components',
         models: 'app/models',
         services: 'app/services',
+        templates: 'app/templates',
         
         jquery: 'vendor/jquery/jquery',
         bur: 'vendor/burjs/bur',

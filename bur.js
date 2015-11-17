@@ -136,7 +136,6 @@ switch (args[0]) {
         
         var wrench = require('wrench');
         var fs = require('fs');
-        var sys = require('sys')
         var exec = require('child_process').exec;
         
         if(fs.existsSync('./.bur_project')) {
@@ -168,7 +167,7 @@ switch (args[0]) {
         
         console.log("\nInstalling Dependencies: ");
         exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
-            sys.puts(stdout);
+            console.log(stdout);
             
             console.log("\nBurJS Project Generated.");
         });
@@ -177,10 +176,9 @@ switch (args[0]) {
         break;
     case 'build':
         var exec = require("child_process").exec;
-        var sys = require("sys");
         
         exec(__dirname + "/node_modules/.bin/r.js -o build.js", function(error, stdout, stderr) {
-            sys.puts(stdout);
+            console.log(stdout);
         });
         break;
     case 'server':
@@ -202,10 +200,9 @@ switch (args[0]) {
         break;
     case 'install':
         var exec = require("child_process").exec;
-        var sys = require("sys");
         
         exec(__dirname + "/node_modules/.bin/bower-installer", function(error, stdout, stderr) {
-            sys.puts(stdout);
+            console.log(stdout);
         });
         break;
     default:
