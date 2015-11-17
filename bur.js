@@ -139,7 +139,7 @@ switch (args[0]) {
         var exec = require('child_process').exec;
         
         if(fs.existsSync('./.bur_project')) {
-            console.error('Already a kage.js project.');
+            console.error('Already a bur.js project.');
             process.exit();
         }
         
